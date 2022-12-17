@@ -1,15 +1,10 @@
 const http = require('http');
 const app = require('./app');
-
-
 const BullObject = require('./server/modules/users/helpers/queueHelper');
 
 const server = http.createServer(app);
-
 const io = require('socket.io')(server);
-
 app.set('socketio', io);
-
 const port = 3000;
 
 BullObject.addRepeatableJobToQueue();

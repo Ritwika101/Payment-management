@@ -1,24 +1,13 @@
-
 const express = require('express');
-
 const router = express.Router();
-
 const mongoose = require('mongoose');
-
 const bcrypt = require('bcrypt');
-
 const Trip = require('../../trips/models/trip');
-
 const jwt = require('jsonwebtoken');
-
 const tripHelper = require('../../trips/helpers/tripHelper');
-
 const userHelper = require('../helpers/userHelper');
-
 const driverHelper = require('../helpers/driverHelper');
-
 const User = require('../models/user');
-
 const multer = require('multer');
 
 const storage = multer.diskStorage({
@@ -47,11 +36,8 @@ const upload = multer({
 });
 
 router.get('/viewbookings', driverHelper.checkAuth,driverHelper.viewBookings);
-
 router.get('/viewpastbookings', driverHelper.checkAuth, driverHelper.viewPastBookings);
-
 router.patch('/start/:tripId', driverHelper.checkAuth,driverHelper.checkDriver, driverHelper.startTrip);
-
 router.patch('/end/:tripId', driverHelper.checkAuth,
                             driverHelper.checkDriver, 
                             upload.single('PODImage'),
