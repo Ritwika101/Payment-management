@@ -1,20 +1,11 @@
-
 const express = require('express');
-
 const router = express.Router();
-
 const mongoose = require('mongoose');
-
 const bcrypt = require('bcrypt');
-
 const User = require('../models/user');
-
 const jwt = require('jsonwebtoken');
-
 const util = require('../../../core/util');
-
 const process = require('../../../../nodemon.json');
-
 const userErrors = require('../../../core/appData');
 
 class UserHelper {

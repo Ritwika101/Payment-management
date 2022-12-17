@@ -1,23 +1,11 @@
 const express = require('express');
-
 const router = express.Router();
-
 const mongoose = require('mongoose');
-
 const bcrypt = require('bcrypt');
-
 const User = require('../../users/models/user');
-
 const Payment_Req = require('../models/payment_req');
-
-const userHelper = require('../../users/helpers/userHelper');
-
-const jwt = require('jsonwebtoken');
-
 const util = require('../../../core/util');
-
 const Ledger = require('../../ledger/models/ledger');
-
 const Trip = require('../../trips/models/trip');
 
 class PaymentReqHelper {

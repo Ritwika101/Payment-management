@@ -1,25 +1,13 @@
 const express = require('express');
-
 const router = express.Router();
-
 const mongoose = require('mongoose');
-
 const bcrypt = require('bcrypt');
-
 const User = require('../../users/models/user');
-
 const Ledger = require('../models/ledger');
-
 const Trip = require('../../trips/models/trip');
-
 const userHelper = require('../../users/helpers/userHelper');
-
 const jwt = require('jsonwebtoken');
-
 const util = require('../../../core/util');
-
-
-
 class LedgerHelper {
     async findLimits(req, res, next) { 
         if(util.isUndefined(req.query) || util.isUndefined(req.query.page) || (util.isUndefined(req.query.limit))){

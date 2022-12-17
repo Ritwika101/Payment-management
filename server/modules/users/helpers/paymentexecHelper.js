@@ -1,27 +1,15 @@
 const express = require('express');
-
 const router = express.Router();
-
 const mongoose = require('mongoose');
-
 const bcrypt = require('bcrypt');
-
 const Trip = require('../../trips/models/trip');
-
 const User = require('../models/user');
-
 const Rate_Card = require('../../ratecards/models/rate_card');
-
 const rateCardHelper = require('../../ratecards/helpers/rateCardHelper')
-
 const jwt = require('jsonwebtoken');
-
 const moment = require('moment');
-
 const process = require('../../../../nodemon.json');
-
 const Pod = require('../../pod/models/pod');
-
 const util = require('../../../core/util');
 
 class PaymentexecHelper {

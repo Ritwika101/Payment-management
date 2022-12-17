@@ -1,19 +1,11 @@
 const express = require('express');
-
 const router = express.Router();
-
 const mongoose = require('mongoose');
-
 const bcrypt = require('bcrypt');
-
 const User = require('../../users/models/user');
-
 const Trip = require('../models/trip');
-
 const jwt = require('jsonwebtoken');
-
 const process = require('../../../../nodemon.json');
-
 const util = require('../../../core/util');
 
 class TripHelper {

@@ -1,25 +1,14 @@
 const express = require('express');
-
 const router = express.Router();
-
 const mongoose = require('mongoose');
-
 const bcrypt = require('bcrypt');
-
 const User = require('../../users/models/user');
-
 const userHelper = require('../../users/helpers/userHelper');
-
 const Trip = require('../../trips/models/trip');
-
 const tripHelper = require('../../trips/helpers/tripHelper');
-
 const Rate_Card = require('../models/rate_card');
-
 const jwt = require('jsonwebtoken');
-
 const process = require('../../../../nodemon.json');
-
 const util = require('../../../core/util');
 
 class rateCardHelper {
