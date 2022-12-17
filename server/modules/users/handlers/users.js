@@ -1,11 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt'); 
-const User = require('../models/user');
 const driverRoutes = require('./drivers');
 const paymentexecRoutes = require('./paymentexecs');
-const jwt = require('jsonwebtoken');
 const userHelper = require('../helpers/userHelper');
 
 router.use('/driver', driverRoutes);
